@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Burlesque in Orlando | Pole Dancing, Acrobatics & Performance Training Schools</title>
+    <meta name="description" content="Complete guide to burlesque training, pole dancing classes, acrobatic instruction, and performance schools in Orlando, Florida. Learn from professional instructors and become a performer.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-brown: #6B4423;
+            --dark-brown: #3E2723;
+            --light-brown: #A1887F;
+            --cream: #EFEBE9;
+            --gold: #D4AF37;
+            --burgundy: #800020;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, var(--cream) 0%, #E0D5CE 100%);
+            color: var(--dark-brown);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--dark-brown) 0%, var(--primary-brown) 50%, var(--burgundy) 100%);
+            color: var(--cream);
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(212, 175, 55, 0.1) 10px,
+                rgba(212, 175, 55, 0.1) 20px
+            );
+            pointer-events: none;
+        }
+        
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-section .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .decorative-line {
+            width: 150px;
+            height: 3px;
+            background: var(--gold);
+            margin: 20px auto;
+            position: relative;
+        }
+        
+        .decorative-line::before,
+        .decorative-line::after {
+            content: '◆';
+            position: absolute;
+            color: var(--gold);
+            font-size: 12px;
+            top: -8px;
+        }
+        
+        .decorative-line::before {
+            left: -20px;
+        }
+        
+        .decorative-line::after {
+            right: -20px;
+        }
+        
+        .school-card {
+            background: white;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(107, 68, 35, 0.15);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .school-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--gold) 0%, var(--burgundy) 100%);
+        }
+        
+        .school-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(107, 68, 35, 0.25);
+        }
+        
+        .card-header-custom {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--burgundy) 100%);
+            color: white;
+            padding: 20px;
+            border: none;
+        }
+        
+        .card-header-custom h4 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .class-type-badge {
+            background: var(--light-brown);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 5px 5px 10px 0;
+        }
+        
+        .level-badge {
+            background: var(--burgundy);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 5px 5px 10px 0;
+        }
+        
+        .info-item {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: start;
+        }
+        
+        .info-item i {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-right: 12px;
+            width: 25px;
+            margin-top: 3px;
+        }
+        
+        .category-section {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(107, 68, 35, 0.1);
+            border-left: 8px solid var(--primary-brown);
+        }
+        
+        .category-section h2 {
+            color: var(--primary-brown);
+            font-size: 2rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        .info-section {
+            background: linear-gradient(135deg, var(--dark-brown) 0%, var(--burgundy) 100%);
+            color: var(--cream);
+            padding: 60px 0;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .info-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                -45deg,
+                transparent,
+                transparent 15px,
+                rgba(212, 175, 55, 0.05) 15px,
+                rgba(212, 175, 55, 0.05) 30px
+            );
+            pointer-events: none;
+        }
+        
+        .info-section .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .info-section h3 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: var(--gold);
+        }
+        
+        .info-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 20px;
+        }
+        
+        .cta-button {
+            background: var(--gold);
+            color: var(--dark-brown);
+            border: none;
+            padding: 12px 35px;
+            border-radius: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: var(--burgundy);
+            color: var(--cream);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(128, 0, 32, 0.4);
+        }
+        
+        .footer {
+            background: var(--dark-brown);
+            color: var(--cream);
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        .offerings-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .offerings-list li {
+            padding: 5px 0;
+        }
+        
+        .offerings-list li i {
+            color: var(--gold);
+            margin-right: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="text-center">
+                <h1>Learn Burlesque & Performance Arts in Orlando</h1>
+                <div class="decorative-line"></div>
+                <p class="subtitle">Professional Training Schools & Dance Studios</p>
+                <p class="lead">Discover where to learn burlesque dancing, pole fitness, acrobatics, and performance skills from expert instructors across Central Florida</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <!-- Burlesque Training Schools -->
+        <div class="category-section">
+            <h2><i class="bi bi-stars text-warning me-2"></i>Burlesque Training & Performance Schools in Orlando</h2>
+            <div class="row">
+                <!-- School 1 -->
+                <div class="col-md-6">
+                    <div class="school-card">
+                        <div class="card-header-custom">
+                            <h4>Orlando Burlesque Academy</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="class-type-badge">Burlesque</span>
+                            <span class="class-type-badge">Striptease</span>
+                            <span class="class-type-badge">Performance</span>
+                            <span class="level-badge">All Levels</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Downtown Orlando, Florida</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-person-check"></i>
+                                <span>Expert burlesque instructors teaching classic and neo-burlesque techniques</span>
+                            </div>
+                            <ul class="offerings-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Beginner burlesque fundamentals</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Advanced performance techniques</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Costume and prop work</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Choreography development</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Stage presence training</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- School 2 -->
+                <div class="col-md-6">
+                    <div class="school-card">
+                        <div class="card-header-custom">
+                            <h4>Bombshell Burlesque Studios</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="class-type-badge">Burlesque</span>
+                            <span class="class-type-badge">Cabaret</span>
+                            <span class="class-type-badge">Showgirl</span>
+                            <span class="level-badge">Beginner to Pro</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Winter Park, Orlando Area</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-person-check"></i>
+                                <span>Professional burlesque performers teaching the art of tease and performance</span>
+                            </div>
+                            <ul class="offerings-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Classic burlesque striptease</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Feather fan techniques</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Tassel twirling</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Character development</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Performance opportunities</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pole Dancing Studios -->
+        <div class="category-section">
+            <h2><i class="bi bi-stars text-warning me-2"></i>Pole Dancing Schools & Fitness Studios in Orlando</h2>
+            <div class="row">
+                <!-- School 3 -->
+                <div class="col-md-6">
+                    <div class="school-card">
+                        <div class="card-header-custom">
+                            <h4>Allure Pole Fitness</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="class-type-badge">Pole Dancing</span>
+                            <span class="class-type-badge">Pole Fitness</span>
+                            <span class="class-type-badge">Exotic Dance</span>
+                            <span class="level-badge">All Levels</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Orlando, Florida</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-person-check"></i>
+                                <span>Certified pole dancing instructors offering comprehensive pole fitness training</span>
+                            </div>
+                            <ul class="offerings-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Pole dancing fundamentals</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Strength and flexibility training</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Exotic pole techniques</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Spin pole and static pole</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Performance choreography</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- School 4 -->
+                <div class="col-md-6">
+                    <div class="school-card">
+                        <div class="card-header-custom">
+                            <h4>Elevate Pole & Fitness</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="class-type-badge">Pole Fitness</span>
+                            <span class="class-type-badge">Aerial Arts</span>
+                            <span class="class-type-badge">Dance</span>
+                            <span class="level-badge">Beginner to Advanced</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>South Orlando, Florida</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-person-check"></i>
+                                <span>Professional pole dancing instructors specializing in fitness and performance</span>
+                            </div>
+                            <ul class="offerings-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Pole dancing levels 1-6</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Pole tricks and transitions</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Heels technique</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Flow and floorwork</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Competition preparation</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- School 5 -->
+                <div class="col-md-6">
+                    <div class="school-card">
+                        <div class="card-header-custom">
+                            <h4>Vertical Dreams Pole Studio</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="class-type-badge">Pole Dance</span>
+                            <span class="class-type-badge">Pole Sport</span>
+                            <span class="class-type-badge">Chair Dance</span>
+                            <span class="level-badge">All Levels Welcome</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>East Orlando, Florida</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-person-check"></i>
+                                <span>Experienced pole instructors teaching sport and exotic pole dancing styles</span>
+                            </div>
+                            <ul class="offerings-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Pole dancing basics to advanced</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Exotic dance techniques</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Flexibility training</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Chair dancing classes</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Private lessons available</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Acrobatics & Aerial Arts -->
+        <div class="category-section">
+            <h2><i class="bi bi-stars text-warning me-2"></i>Acrobatics & Aerial Performance Training in Orlando</h2>
+            <div class="row">
+                <!-- School 6 -->
+                <div class="col-md-6">
+                    <div class="school-card">
+                        <div class="card-header-custom">
+                            <h4>Orlando Aerial Arts</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="class-type-badge">Aerial Silks</span>
+                            <span class="class-type-badge">Lyra</span>
+                            <span class="class-type-badge">Trapeze</span>
+                            <span class="level-badge">All Experience Levels</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Central Orlando, Florida</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-person-check"></i>
+                                <span>Professional aerialists teaching silk, lyra, and trapeze performance skills</span>
+                            </div>
+                            <ul class="offerings-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Aerial silks training</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Aerial hoop (lyra) classes</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Static trapeze instruction</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Acrobatic conditioning</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Performance technique</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- School 7 -->
+                <div class="col-md-6">
+                    <div class="school-card">
+                        <div class="card-header-custom">
+                            <h4>Cirque School Orlando</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="class-type-badge">Circus Arts</span>
+                            <span class="class-type-badge">Acrobatics</span>
+                            <span class="class-type-badge">Contortion</span>
+                            <span class="level-badge">Beginner to Professional</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Orlando Metro Area, Florida</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-person-check"></i>
+                                <span>Circus professionals teaching acrobatics, contortion, and performance arts</span>
+                            </div>
+                            <ul class="offerings-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Floor acrobatics</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Partner acrobatics</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Flexibility and contortion</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Hand balancing</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Performance coaching</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dance Studios -->
+        <div class="category-section">
+            <h2><i class="bi bi-stars text-warning me-2"></i>Dance Studios Teaching Performance & Entertainment Dance</h2>
+            <div class="row">
+                <!-- School 8 -->
+                <div class="col-md-6">
+                    <div class="school-card">
+                        <div class="card-header-custom">
+                            <h4>Dance Dynamics Studio</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="class-type-badge">Jazz Dance</span>
+                            <span class="class-type-badge">Contemporary</span>
+                            <span class="class-type-badge">Hip Hop</span>
+                            <span class="level-badge">All Levels</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Downtown Orlando, Florida</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-person-check"></i>
+                                <span>Professional dancers teaching jazz, contemporary, and performance dance</span>
+                            </div>
+                            <ul class="offerings-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Jazz technique and style</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Contemporary dance training</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Performance choreography</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Stage presence coaching</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Showcase opportunities</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- School 9 -->
+                <div class="col-md-6">
+                    <div class="school-card">
+                        <div class="card-header-custom">
+                            <h4>Rhythm & Motion Dance Academy</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="class-type-badge">Ballroom</span>
+                            <span class="class-type-badge">Latin Dance</span>
+                            <span class="class-type-badge">Performance</span>
+                            <span class="level-badge">Beginner to Advanced</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Winter Park, Orlando Area</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-person-check"></i>
+                                <span>Expert instructors teaching ballroom, Latin, and entertainment dance styles</span>
+                            </div>
+                            <ul class="offerings-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Ballroom dance technique</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Salsa and Latin styles</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Performance partnerships</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Choreography services</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Competition training</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- School 10 -->
+                <div class="col-md-6">
+                    <div class="school-card">
+                        <div class="card-header-custom">
+                            <h4>Encore Dance Company</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="class-type-badge">Musical Theatre</span>
+                            <span class="class-type-badge">Cabaret</span>
+                            <span class="class-type-badge">Performance</span>
+                            <span class="level-badge">All Skill Levels</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>South Orlando, Florida</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-person-check"></i>
+                                <span>Theatre professionals teaching musical theatre dance and cabaret performance</span>
+                            </div>
+                            <ul class="offerings-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Musical theatre dance</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Cabaret performance style</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Acting through dance</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Broadway technique</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Production opportunities</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Information Section -->
+    <div class="info-section">
+        <div class="container text-center">
+            <h3>Becoming a Burlesque or Performance Artist in Orlando</h3>
+            <div class="decorative-line"></div>
+            <p class="mt-4">
+                Orlando, Florida offers exceptional training opportunities for aspiring burlesque dancers, pole performers, aerialists, and entertainment artists. These professional schools and studios provide comprehensive instruction from experienced performers and certified instructors who understand the technical skills, artistic expression, and stage presence required to succeed in the performance industry.
+            </p>
+            <p>
+                Students in Orlando can learn burlesque fundamentals including classic striptease techniques, costume work with feathers and fans, tassel twirling, and character development. Pole dancing schools teach everything from beginner pole fitness to advanced exotic dance techniques, while acrobatic studios offer aerial silks, lyra, trapeze, and floor acrobatics training. Dance academies provide instruction in jazz, contemporary, ballroom, Latin, and musical theatre styles that complement burlesque and cabaret performance.
+            </p>
+            <p>
+                Whether you want to perform in Orlando's vibrant cabaret scene, work as a professional burlesque dancer, become a pole fitness instructor, or develop acrobatic skills for circus arts, these Central Florida training facilities provide the education, practice space, and performance opportunities needed to launch a successful career in entertainment and performance arts. Many schools offer beginner classes for those new to performance, intermediate levels for developing artists, and advanced training for professional performers looking to refine their craft.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container text-center">
+            <h4 class="mb-3" style="color: var(--gold);">Orlando Performance Training Directory</h4>
+            <p>&copy; 2024 Learn Burlesque Orlando. Your complete guide to performance arts training in Central Florida.</p>
+            <p class="mb-0"><small>Discover burlesque schools, pole dancing studios, acrobatic training, and dance instruction across Orlando, Winter Park, and surrounding areas.</small></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

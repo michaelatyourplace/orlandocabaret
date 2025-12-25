@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orlando Event Venues for Cabaret & Burlesque Shows | Host Locations</title>
+    <meta name="description" content="Discover Orlando venues that host cabaret shows, burlesque performances, and male revue entertainment across Central Florida.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-brown: #6B4423;
+            --dark-brown: #3E2723;
+            --light-brown: #A1887F;
+            --cream: #EFEBE9;
+            --gold: #D4AF37;
+            --burgundy: #800020;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, var(--cream) 0%, #E0D5CE 100%);
+            color: var(--dark-brown);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--dark-brown) 0%, var(--primary-brown) 50%, var(--burgundy) 100%);
+            color: var(--cream);
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(212, 175, 55, 0.1) 10px,
+                rgba(212, 175, 55, 0.1) 20px
+            );
+            pointer-events: none;
+        }
+        
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-section .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .decorative-line {
+            width: 150px;
+            height: 3px;
+            background: var(--gold);
+            margin: 20px auto;
+            position: relative;
+        }
+        
+        .decorative-line::before,
+        .decorative-line::after {
+            content: '◆';
+            position: absolute;
+            color: var(--gold);
+            font-size: 12px;
+            top: -8px;
+        }
+        
+        .decorative-line::before {
+            left: -20px;
+        }
+        
+        .decorative-line::after {
+            right: -20px;
+        }
+        
+        .venue-card {
+            background: white;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(107, 68, 35, 0.15);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .venue-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--gold) 0%, var(--burgundy) 100%);
+        }
+        
+        .venue-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(107, 68, 35, 0.25);
+        }
+        
+        .card-header-custom {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--burgundy) 100%);
+            color: white;
+            padding: 20px;
+            border: none;
+        }
+        
+        .card-header-custom h4 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .venue-type-badge {
+            background: var(--light-brown);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 5px 5px 10px 0;
+        }
+        
+        .capacity-badge {
+            background: var(--burgundy);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 5px 5px 10px 0;
+        }
+        
+        .info-item {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-item i {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-right: 12px;
+            width: 25px;
+        }
+        
+        .city-section {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(107, 68, 35, 0.1);
+            border-left: 8px solid var(--primary-brown);
+        }
+        
+        .city-section h2 {
+            color: var(--primary-brown);
+            font-size: 2rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        .male-burlesque-section {
+            background: linear-gradient(135deg, var(--dark-brown) 0%, var(--burgundy) 100%);
+            color: var(--cream);
+            padding: 60px 0;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .male-burlesque-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                -45deg,
+                transparent,
+                transparent 15px,
+                rgba(212, 175, 55, 0.05) 15px,
+                rgba(212, 175, 55, 0.05) 30px
+            );
+            pointer-events: none;
+        }
+        
+        .male-burlesque-section .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .male-burlesque-section h3 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: var(--gold);
+        }
+        
+        .male-burlesque-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .cta-button {
+            background: var(--gold);
+            color: var(--dark-brown);
+            border: none;
+            padding: 12px 35px;
+            border-radius: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: var(--burgundy);
+            color: var(--cream);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(128, 0, 32, 0.4);
+        }
+        
+        .footer {
+            background: var(--dark-brown);
+            color: var(--cream);
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        .amenities-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .amenities-list li {
+            padding: 5px 0;
+        }
+        
+        .amenities-list li i {
+            color: var(--gold);
+            margin-right: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="text-center">
+                <h1>Orlando Event Venues</h1>
+                <div class="decorative-line"></div>
+                <p class="subtitle">Premier Locations for Cabaret & Burlesque Shows</p>
+                <p class="lead">Explore the finest venues hosting cabaret, burlesque, and male entertainment throughout Central Florida</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <!-- Downtown Orlando Venues -->
+        <div class="city-section">
+            <h2><i class="bi bi-building text-warning me-2"></i>Downtown Orlando Venues</h2>
+            <div class="row">
+                <!-- Venue 1 -->
+                <div class="col-md-6">
+                    <div class="venue-card">
+                        <div class="card-header-custom">
+                            <h4>The Social</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="venue-type-badge">Nightclub</span>
+                            <span class="venue-type-badge">Live Performances</span>
+                            <span class="capacity-badge">Capacity: 500+</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>54 N Orange Ave, Downtown Orlando</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-music-note-beamed"></i>
+                                <span>Hosts burlesque shows, cabaret nights, and special performances</span>
+                            </div>
+                            <ul class="amenities-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Full bar service</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Professional stage and lighting</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Available for private events</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Contact Venue</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venue 2 -->
+                <div class="col-md-6">
+                    <div class="venue-card">
+                        <div class="card-header-custom">
+                            <h4>The Beacham</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="venue-type-badge">Concert Hall</span>
+                            <span class="venue-type-badge">Special Events</span>
+                            <span class="capacity-badge">Capacity: 1,250</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>46 N Orange Ave, Downtown Orlando</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-music-note-beamed"></i>
+                                <span>Historic theater hosting touring burlesque and cabaret productions</span>
+                            </div>
+                            <ul class="amenities-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>VIP balcony seating</li>
+                                <li><i class="bi bi-check-circle-fill"></i>State-of-the-art sound system</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Multiple bars and lounges</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Contact Venue</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venue 3 -->
+                <div class="col-md-6">
+                    <div class="venue-card">
+                        <div class="card-header-custom">
+                            <h4>The Venue Orlando</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="venue-type-badge">Event Space</span>
+                            <span class="venue-type-badge">Performance Venue</span>
+                            <span class="capacity-badge">Capacity: 300</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Church Street District</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-music-note-beamed"></i>
+                                <span>Regular burlesque showcases and cabaret performances</span>
+                            </div>
+                            <ul class="amenities-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Intimate performance space</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Professional stage setup</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Bar and catering available</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Contact Venue</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venue 4 -->
+                <div class="col-md-6">
+                    <div class="venue-card">
+                        <div class="card-header-custom">
+                            <h4>Southern Nights Orlando</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="venue-type-badge">Nightclub</span>
+                            <span class="venue-type-badge">LGBTQ+ Venue</span>
+                            <span class="capacity-badge">Capacity: 400</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>375 S Bumby Ave, Orlando</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-music-note-beamed"></i>
+                                <span>Weekly drag shows, cabaret nights, and burlesque performances</span>
+                            </div>
+                            <ul class="amenities-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Multiple performance stages</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Dance floor and lounge areas</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Full service bar</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Contact Venue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- International Drive & Tourist District -->
+        <div class="city-section">
+            <h2><i class="bi bi-building text-warning me-2"></i>International Drive & Tourist District</h2>
+            <div class="row">
+                <!-- Venue 5 -->
+                <div class="col-md-6">
+                    <div class="venue-card">
+                        <div class="card-header-custom">
+                            <h4>Pointe Orlando</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="venue-type-badge">Entertainment Complex</span>
+                            <span class="venue-type-badge">Multiple Venues</span>
+                            <span class="capacity-badge">Various Capacities</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>9101 International Dr, Orlando</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-music-note-beamed"></i>
+                                <span>Features multiple venues hosting cabaret and entertainment shows</span>
+                            </div>
+                            <ul class="amenities-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Multiple performance spaces</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Restaurants and bars on-site</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Ample parking available</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Contact Venue</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venue 6 -->
+                <div class="col-md-6">
+                    <div class="venue-card">
+                        <div class="card-header-custom">
+                            <h4>Tin Roof Orlando</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="venue-type-badge">Live Music Venue</span>
+                            <span class="venue-type-badge">Restaurant & Bar</span>
+                            <span class="capacity-badge">Capacity: 250</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>8371 International Dr, Orlando</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-music-note-beamed"></i>
+                                <span>Hosts specialty burlesque nights and variety shows</span>
+                            </div>
+                            <ul class="amenities-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Rooftop patio venue</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Full kitchen and bar</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Nightly live entertainment</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Contact Venue</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venue 7 -->
+                <div class="col-md-6">
+                    <div class="venue-card">
+                        <div class="card-header-custom">
+                            <h4>ICON Park Entertainment Complex</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="venue-type-badge">Entertainment District</span>
+                            <span class="venue-type-badge">Special Events</span>
+                            <span class="capacity-badge">Multiple Spaces</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>8401 International Dr, Orlando</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-music-note-beamed"></i>
+                                <span>Various venues within complex host traveling shows and performances</span>
+                            </div>
+                            <ul class="amenities-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Modern event spaces</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Tourist-friendly location</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Multiple dining options</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Contact Venue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Winter Park & Suburbs -->
+        <div class="city-section">
+            <h2><i class="bi bi-building text-warning me-2"></i>Winter Park & Surrounding Areas</h2>
+            <div class="row">
+                <!-- Venue 8 -->
+                <div class="col-md-6">
+                    <div class="venue-card">
+                        <div class="card-header-custom">
+                            <h4>The Alfond Inn</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="venue-type-badge">Boutique Hotel</span>
+                            <span class="venue-type-badge">Event Space</span>
+                            <span class="capacity-badge">Capacity: 150</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>300 E New England Ave, Winter Park</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-music-note-beamed"></i>
+                                <span>Upscale venue hosting sophisticated cabaret evenings</span>
+                            </div>
+                            <ul class="amenities-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Elegant event spaces</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Premium bar service</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Art gallery setting</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Contact Venue</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venue 9 -->
+                <div class="col-md-6">
+                    <div class="venue-card">
+                        <div class="card-header-custom">
+                            <h4>Winter Park Playhouse</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="venue-type-badge">Theater</span>
+                            <span class="venue-type-badge">Cabaret Venue</span>
+                            <span class="capacity-badge">Capacity: 100</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>711 Orange Ave, Winter Park</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-music-note-beamed"></i>
+                                <span>Intimate theater specializing in cabaret-style productions</span>
+                            </div>
+                            <ul class="amenities-list mt-3">
+                                <li><i class="bi bi-check-circle-fill"></i>Classic cabaret seating</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Professional lighting and sound</li>
+                                <li><i class="bi bi-check-circle-fill"></i>Bar service during shows</li>
+                            </ul>
+                            <button class="btn cta-button mt-3">Contact Venue</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Male Burlesque Section -->
+    <div class="male-burlesque-section">
+        <div class="container text-center">
+            <h3>Hosting Male Burlesque & Entertainment</h3>
+            <div class="decorative-line"></div>
+            <p class="mt-4">
+                Many Orlando venues welcome male burlesque dancers and male revue shows as part of their diverse entertainment offerings. From intimate cabaret spaces perfect for solo male burlesque performances to larger nightclub venues ideal for full male revue productions, Central Florida provides numerous hosting opportunities for male entertainers. These venues offer professional stages, quality sound and lighting systems, and supportive atmospheres for male burlesque artists to showcase their talents. Whether booking a private bachelorette party performance or organizing a public show, Orlando's entertainment venues provide the infrastructure and audience to make male burlesque and revue shows successful, contributing to the city's vibrant and inclusive performance culture.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container text-center">
+            <h4 class="mb-3" style="color: var(--gold);">Orlando Event Venues</h4>
+            <p>&copy; 2024 Orlando Event Venues. Connecting performers with premier locations across Central Florida.</p>
+            <p class="mb-0"><small>Your complete directory of venues hosting cabaret, burlesque, and entertainment shows in Orlando and beyond.</small></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orlando Male Revues | Male Strip Shows & Entertainment</title>
+    <meta name="description" content="Find the hottest male revue shows and male strip entertainment in Orlando, Kissimmee, and Central Florida.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-brown: #6B4423;
+            --dark-brown: #3E2723;
+            --light-brown: #A1887F;
+            --cream: #EFEBE9;
+            --gold: #D4AF37;
+            --burgundy: #800020;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, var(--cream) 0%, #E0D5CE 100%);
+            color: var(--dark-brown);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--dark-brown) 0%, var(--primary-brown) 50%, var(--burgundy) 100%);
+            color: var(--cream);
+            padding: 80px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(212, 175, 55, 0.1) 10px,
+                rgba(212, 175, 55, 0.1) 20px
+            );
+            pointer-events: none;
+        }
+        
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-section .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .decorative-line {
+            width: 150px;
+            height: 3px;
+            background: var(--gold);
+            margin: 20px auto;
+            position: relative;
+        }
+        
+        .decorative-line::before,
+        .decorative-line::after {
+            content: '◆';
+            position: absolute;
+            color: var(--gold);
+            font-size: 12px;
+            top: -8px;
+        }
+        
+        .decorative-line::before {
+            left: -20px;
+        }
+        
+        .decorative-line::after {
+            right: -20px;
+        }
+        
+        .venue-card {
+            background: white;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(107, 68, 35, 0.15);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .venue-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--gold) 0%, var(--burgundy) 100%);
+        }
+        
+        .venue-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(107, 68, 35, 0.25);
+        }
+        
+        .card-header-custom {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--burgundy) 100%);
+            color: white;
+            padding: 20px;
+            border: none;
+        }
+        
+        .card-header-custom h4 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .venue-type-badge {
+            background: var(--light-brown);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 5px 5px 10px 0;
+        }
+        
+        .info-item {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-item i {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-right: 12px;
+            width: 25px;
+        }
+        
+        .city-section {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(107, 68, 35, 0.1);
+            border-left: 8px solid var(--primary-brown);
+        }
+        
+        .city-section h2 {
+            color: var(--primary-brown);
+            font-size: 2rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        .male-burlesque-section {
+            background: linear-gradient(135deg, var(--dark-brown) 0%, var(--burgundy) 100%);
+            color: var(--cream);
+            padding: 60px 0;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .male-burlesque-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                -45deg,
+                transparent,
+                transparent 15px,
+                rgba(212, 175, 55, 0.05) 15px,
+                rgba(212, 175, 55, 0.05) 30px
+            );
+            pointer-events: none;
+        }
+        
+        .male-burlesque-section .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .male-burlesque-section h3 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: var(--gold);
+        }
+        
+        .male-burlesque-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .cta-button {
+            background: var(--gold);
+            color: var(--dark-brown);
+            border: none;
+            padding: 12px 35px;
+            border-radius: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: var(--burgundy);
+            color: var(--cream);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(128, 0, 32, 0.4);
+        }
+        
+        .footer {
+            background: var(--dark-brown);
+            color: var(--cream);
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="text-center">
+                <h1>Orlando Male Revues</h1>
+                <div class="decorative-line"></div>
+                <p class="subtitle">Premier Male Entertainment Directory</p>
+                <p class="lead">Experience unforgettable male revue shows and exotic entertainment throughout Central Florida</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <!-- Orlando Section -->
+        <div class="city-section">
+            <h2><i class="bi bi-geo-alt-fill text-warning me-2"></i>Orlando Male Revue Shows</h2>
+            <div class="row">
+                <!-- Venue 1 -->
+                <div class="col-md-6">
+                    <div class="venue-card">
+                        <div class="card-header-custom">
+                            <h4>Thunder From Down Under</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="venue-type-badge">Male Revue</span>
+                            <span class="venue-type-badge">Touring Show</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Various Orlando Venues</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-calendar-event"></i>
+                                <span>Special Event Dates</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-star-fill"></i>
+                                <span>World-famous Australian male revue featuring high-energy performances</span>
+                            </div>
+                            <button class="btn cta-button mt-3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venue 2 -->
+                <div class="col-md-6">
+                    <div class="venue-card">
+                        <div class="card-header-custom">
+                            <h4>Magic Mike Live</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="venue-type-badge">Male Dance Show</span>
+                            <span class="venue-type-badge">Premium Experience</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>International Drive Area</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-calendar-event"></i>
+                                <span>Multiple Weekly Shows</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-star-fill"></i>
+                                <span>Premium male entertainment experience with world-class choreography</span>
+                            </div>
+                            <button class="btn cta-button mt-3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venue 3 -->
+                <div class="col-md-6">
+                    <div class="venue-card">
+                        <div class="card-header-custom">
+                            <h4>The Men of Exotica</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="venue-type-badge">Male Revue</span>
+                            <span class="venue-type-badge">Ladies Night</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Downtown Orlando Nightclubs</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-calendar-event"></i>
+                                <span>Weekly Ladies Nights</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-star-fill"></i>
+                                <span>Local male dancers bringing excitement to Orlando nightlife every week</span>
+                            </div>
+                            <button class="btn cta-button mt-3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venue 4 -->
+                <div class="col-md-6">
+                    <div class="venue-card">
+                        <div class="card-header-custom">
+                            <h4>Private Party Entertainment</h4>
+                        </div>
+                        <div class="card-body">
+                            <span class="venue-type-badge">Private Events</span>
+                            <span class="venue-type-badge">Bachelorette Parties</span>
+                            <div class="info-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Orlando Metro Area</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-calendar-event"></i>
+                                <span>Book Your Date</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="bi bi-star-fill"></i>
+                                <span>Professional male entertainers available for bachelorette parties and celebrations</span>
+                            </div>
+                            <button class="btn cta-button mt-3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Male Burlesque Section -->
+    <div class="male-burlesque-section">
+        <div class="container text-center">
+            <h3>Male Burlesque Dancers in Orlando</h3>
+            <div class="decorative-line"></div>
+            <p class="mt-4">
+                Orlando's male entertainment scene features talented male burlesque dancers who bring artistry and athleticism to every performance. These skilled performers combine classic burlesque striptease with modern choreography, creating shows that celebrate masculinity through theatrical presentation. Male burlesque dancers in Orlando perform at various venues throughout the city, from intimate cabaret spaces to larger nightclub stages, offering audiences a sophisticated alternative to traditional male revue shows. Whether performing solo acts or as part of ensemble productions, Orlando's male burlesque artists deliver memorable entertainment that pushes creative boundaries while honoring the timeless art of tease and performance.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container text-center">
+            <h4 class="mb-3" style="color: var(--gold);">Orlando Male Revues</h4>
+            <p>&copy; 2024 Orlando Male Revues. Your guide to premier male entertainment in Central Florida.</p>
+            <p class="mb-0"><small>Discover the best male revue shows across Orlando, Kissimmee, and surrounding areas.</small></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
